@@ -4,7 +4,7 @@ import Link from "next/link";
 import { components } from "@/sanity/portableTextComponent";
 import { PortableText } from "next-sanity";
 import { sanityFetch } from "@/sanity/lib/live";
-import { POST_QUERY } from "@/sanity/lib/queries";
+import { POST_DETAIL_QUERY } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 
 export default async function Page({
@@ -13,7 +13,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { data: post } = await sanityFetch({
-    query: POST_QUERY,
+    query: POST_DETAIL_QUERY,
     params: await params,
   });
 
@@ -39,7 +39,7 @@ export default async function Page({
       ) : null}
       <h1 className="text-4xl font-bold text-balance">{post?.title}</h1>
       {post?.body ? (
-        <div className="prose">
+        <div className="prose prose-invert">
           <PortableText value={post.body} components={components} />
         </div>
       ) : null}

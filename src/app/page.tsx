@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
             href="/posts"
             rel="noopener noreferrer"
           >
+            <Button> LIHAT POSTTT</Button>
             <Image
               className="dark:invert"
               src="/vercel.svg"
