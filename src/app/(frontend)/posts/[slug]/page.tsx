@@ -39,7 +39,7 @@ export default async function Page({
       ) : null}
       <h1 className="text-4xl font-bold text-balance">{post?.title}</h1>
       {post?.body ? (
-        <div className="prose prose-invert">
+        <div className="prose prose-zinc">
           <PortableText value={post.body} components={components} />
         </div>
       ) : null}

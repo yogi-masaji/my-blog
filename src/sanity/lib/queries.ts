@@ -3,7 +3,24 @@ import {defineQuery} from 'next-sanity'
 export const POSTS_QUERY = defineQuery(`
   *[_type == "post" && defined(slug.current)] 
   | order(publishedAt asc)[$start...$end] {
-    _id, title, slug, publishedAt
+    _id,
+  title,
+  slug,
+  body,
+  mainImage,
+  publishedAt,
+  "categories": coalesce(
+    categories[]->{
+      _id,
+      slug,
+      title
+    },
+    []
+  ),
+  author->{
+    name,
+    image
+  }
   }
 `);
 
