@@ -13,6 +13,10 @@ export default {
   theme: {
   	extend: {
   		colors: {
+			cokelatmuda: '#F9F0E9',
+			maintext: '#1F0D0C',
+			primarycolor: '#341713',
+			primarybutton: '#F5DF23',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
