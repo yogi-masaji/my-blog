@@ -12,6 +12,10 @@ export default {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			climatecrisis: ['var(--font-climatecrisis)'],
+			jakartasans:['var(--font-jakartasans)'],
+		},
   		colors: {
 			cokelatmuda: '#F9F0E9',
 			maintext: '#1F0D0C',
